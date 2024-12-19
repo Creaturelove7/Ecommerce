@@ -1,0 +1,16 @@
+spring:
+  application:
+    name:
+      ECommerceBackend
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ecommerce
+    username: postgres
+    password: secrets
+    driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      mode: always # ??????
+      schema-locations: "classpath:postgres-init.sql"
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/ecommerce
