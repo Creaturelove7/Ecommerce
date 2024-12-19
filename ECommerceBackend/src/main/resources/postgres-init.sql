@@ -1,58 +1,69 @@
-CREATE TABLE users (
-    user_id SERIAL PRIMARY KEY,
-    username VARCHAR(50) NOT NULL UNIQUE,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    password_hash VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+DROP TABLE IF EXISTS orders;
+DROP TABLE IF EXISTS carts;
+DROP TABLE IF EXISTS authorities;
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users
+(
+    id         SERIAL PRIMARY KEY   NOT NULL,
+    username   TEXT UNIQUE          NOT NULL,
+    enabled    BOOLEAN DEFAULT TRUE NOT NULL,
+    password   TEXT                 NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
 
-CREATE TABLE inventory (
-    inventory_id SERIAL PRIMARY KEY,
-    product_id UUID NOT NULL,
-    stock INT NOT NULL CHECK (stock >= 0),
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (product_id) REFERENCES products(product_id)
+CREATE TABLE authorities
+(
+    id         SERIAL PRIMARY KEY NOT NULL,
+    username   TEXT               NOT NULL,
+    authority  TEXT               NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    CONSTRAINT fk_user FOREIGN KEY (username) REFERENCES users (username) ON DELETE CASCADE
 );
 
-CREATE TABLE payments (
-    payment_id SERIAL PRIMARY KEY,
-    order_id INT NOT NULL,
-    payment_status VARCHAR(20) DEFAULT 'PENDING',
-    transaction_id VARCHAR(50),
-    amount DECIMAL(10, 2) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (order_id) REFERENCES orders(order_id)
+CREATE TABLE carts
+(
+    id          SERIAL PRIMARY KEY NOT NULL,
+    user_id     INTEGER UNIQUE     NOT NULL,
+    total_price NUMERIC            NOT NULL,
+    created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
 );
 
-CREATE TABLE orders (
-    order_id SERIAL PRIMARY KEY,
-    user_id INT NOT NULL,
-    total_amount DECIMAL(10, 2) NOT NULL,
-    status VARCHAR(20) DEFAULT 'PENDING',
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
+CREATE TABLE orders
+(
+    id                  SERIAL PRIMARY KEY NOT NULL,
+    menu_item_object_id TEXT               NOT NULL, -- 存储 MongoDB 的 ObjectId
+    cart_id             INTEGER            NOT NULL,
+    price               NUMERIC            NOT NULL,
+    quantity            INTEGER            NOT NULL,
+    created_at          TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at          TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    CONSTRAINT fk_cart FOREIGN KEY (cart_id) REFERENCES carts (id) ON DELETE CASCADE
 );
 
-CREATE TABLE order_items (
-    order_item_id SERIAL PRIMARY KEY,
-    order_id INT NOT NULL,
-    product_id UUID NOT NULL,
-    quantity INT NOT NULL CHECK (quantity > 0),
-    price DECIMAL(10, 2) NOT NULL,
-    FOREIGN KEY (order_id) REFERENCES orders(order_id)
-);
+INSERT INTO users (username, password) VALUES
+                                           ('user1', 'password1'),
+                                           ('user2', 'password2'),
+                                           ('user3', 'password3');
 
-CREATE TABLE cart (
-    cart_id SERIAL PRIMARY KEY,
-    user_id INT NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
-);
+-- 插入测试数据到 authorities 表
+INSERT INTO authorities (username, authority) VALUES
+                                                  ('user1', 'ROLE_USER'),
+                                                  ('user2', 'ROLE_USER'),
+                                                  ('user3', 'ROLE_ADMIN');
 
-CREATE TABLE cart_items (
-    cart_item_id SERIAL PRIMARY KEY,
-    cart_id INT NOT NULL,
-    product_id UUID NOT NULL,
-    quantity INT NOT NULL CHECK (quantity > 0),
-    FOREIGN KEY (cart_id) REFERENCES cart(cart_id)
-);
+-- 插入测试数据到 carts 表
+INSERT INTO carts (user_id, total_price) VALUES
+                                             (1, 100.00),
+                                             (2, 200.50),
+                                             (3, 150.75);
+
+-- 插入测试数据到 orders 表
+INSERT INTO orders (menu_item_object_id, cart_id, price, quantity) VALUES
+                                                                       ('648d1a7d89d9c48223abcd01', 1, 25.00, 2),
+                                                                       ('648d1a7d89d9c48223abcd02', 2, 50.25, 3),
+                                                                       ('648d1a7d89d9c48223abcd03', 3, 30.00, 1);
