@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: FactoryService
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          time_zone = UTC
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ecommerce
+    username: myuser
+    password: mypassword
+    driver-class-name: org.postgresql.Driver
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/ecommerce
+server:
+  port: 8082
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/  # Eureka Server
+  instance:
+    prefer-ip-address: true  # Registry use IP rather than hostname
+feign:
+  client:
+    config:
+      default:
+        connect-timeout: 5000 # ??????
+        read-timeout: 5000    # ??????
+        logger-level: full    # ?????NONE, BASIC, HEADERS, FULL

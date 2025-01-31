@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3406124a-afae-467f-bfef-0fdf7310ec4c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/IoTECommerce.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryService/src/main/java/com/creaturelove/factoryservice/config/MongoDBConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryService/src/main/java/com/creaturelove/factoryservice/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryService/src/main/java/com/creaturelove/factoryservice/db/entity/CartEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryService/src/main/java/com/creaturelove/factoryservice/db/entity/CartProductEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryService/src/main/java/com/creaturelove/factoryservice/db/entity/InventoryEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryService/src/main/java/com/creaturelove/factoryservice/db/entity/OrderEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryService/src/main/java/com/creaturelove/factoryservice/db/entity/OrderItemEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryService/src/main/java/com/creaturelove/factoryservice/db/entity/ProductEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryService/src/main/java/com/creaturelove/factoryservice/db/entity/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryService/src/main/java/com/creaturelove/factoryservice/db/repository/CartRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryService/src/main/java/com/creaturelove/factoryservice/db/repository/InventoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryService/src/main/java/com/creaturelove/factoryservice/db/repository/OrderItemRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryService/src/main/java/com/creaturelove/factoryservice/db/repository/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryService/src/main/java/com/creaturelove/factoryservice/db/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryService/src/main/java/com/creaturelove/factoryservice/db/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryService/src/main/java/com/creaturelove/factoryservice/model/dto/CartProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryService/src/main/java/com/creaturelove/factoryservice/model/dto/OrderHistoryDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryService/src/main/java/com/creaturelove/factoryservice/model/dto/OrderItemDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryService/src/main/java/com/creaturelove/factoryservice/model/request/ProductBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryService/src/main/java/com/creaturelove/factoryservice/model/request/RegisterBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryService/src/main/java/com/creaturelove/factoryservice/service/InventoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryService/src/main/java/com/creaturelove/factoryservice/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/controller/CartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/db/entity/CartEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/db/entity/CartProductEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/db/entity/InventoryEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/db/entity/OrderEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/db/entity/OrderItemEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/db/entity/ProductEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/db/entity/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/db/repository/CartRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/db/repository/InventoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/db/repository/OrderItemRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/db/repository/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/db/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/db/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/externalService/FactoryClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/model/dto/CartProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/model/dto/OrderHistoryDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/model/dto/OrderItemDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/model/request/ProductBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/model/request/RegisterBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/service/CartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/service/PaymentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/java/com/creaturelove/storeservice/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StoreService/src/main/resources/postgres-init.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ECommerceBackend/src/main/java/com/creaturelove/ecommercebackend/externalService/FactoryClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ECommerceBackend/src/main/java/com/creaturelove/ecommercebackend/service/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ECommerceBackend/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../ECommerceBackend/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ECommerceBackend/src/main/java/com/creaturelove/ecommercebackend/ECommerceBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ECommerceBackend/src/main/java/com/creaturelove/ecommercebackend/ECommerceBackendApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ECommerceBackend/src/main/java/com/creaturelove/ecommercebackend/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ECommerceBackend/src/main/java/com/creaturelove/ecommercebackend/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ECommerceBackend/src/main/java/com/creaturelove/ecommercebackend/service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ECommerceBackend/src/main/java/com/creaturelove/ecommercebackend/service/InventoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ECommerceBackend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../ECommerceBackend/src/main/resources/application.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2sJTKqd5ra7gWJFzMsx5lcYhZ7m" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/zhangrenren/MyApplication/FullStackApp/IoTECommerce/Backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="EurekaServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.creaturelove.eurekaserver.EurekaServerApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.creaturelove.eurekaserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.EurekaServerApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3406124a-afae-467f-bfef-0fdf7310ec4c" name="Changes" comment="" />
+      <created>1738172618151</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1738172618151</updated>
+      <workItem from="1738172619117" duration="3108000" />
+      <workItem from="1738213521467" duration="3000" />
+      <workItem from="1738213583323" duration="1247000" />
+      <workItem from="1738284213321" duration="210000" />
+      <workItem from="1738284589051" duration="568000" />
+      <workItem from="1738285331587" duration="1118000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/StoreService" />
+    </ignored-roots>
+  </component>
+</project>

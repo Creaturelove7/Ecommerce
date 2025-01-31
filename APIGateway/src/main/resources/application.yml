@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: APIGateway  # ???????
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true  # ???? Eureka ?????
+      routes:  # ???????????
+        - id: FactoryService  # ??ID
+          uri: lb://FACTORYSERVICE  # ???????????
+          predicates:
+            - Path=/api/factory/**  # ??????
+          filters:
+            - StripPrefix=2  # ???????????
+        - id: StoreService  # ??ID
+          uri: lb://STORESERVICE  # ???????????
+          predicates:
+            - Path=/api/store/**  # ??????
+          filters:
+            - StripPrefix=2  # ???????????
+          # ???????????
+            - name: RequestRateLimiter
+              args:
+                key-resolver: "#{@userKeyResolver}"
+                redis-rate-limiter.replenishRate: 1   # ???? 5 ???
+                redis-rate-limiter.burstCapacity: 1  # ???? 10 ???
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/  # Eureka Server ??
+server:
+  port: 8080  # API Gateway ???
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    reactor.netty.http.client: DEBUG
